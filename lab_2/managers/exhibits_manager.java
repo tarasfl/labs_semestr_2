@@ -1,4 +1,4 @@
-package lab_2.managers.exhibits;
+package manager;
 
 class ExhibitsManager{
     private sort_exhibits_by_time_of_presenting(){
