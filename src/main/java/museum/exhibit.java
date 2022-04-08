@@ -4,7 +4,7 @@ import java.util.Date;
 
 class Exhibit{
     protected String author;
-    protected int year;
+    protected Date year;
     protected String origin;
     protected String theme;
     protected Date date_of_presenting;
@@ -12,9 +12,9 @@ class Exhibit{
 
     protected Exhibit(){
         author = "Hto";
-        year = 0;
+        year = new Date(0000);
         origin = "De";
-        theme = "tek treba";
+        theme = "tak treba";
         date_of_presenting =  new Date(0000, 00, 00);
     }
 
