@@ -1,5 +1,6 @@
-import java.util.Date
 package museum;
+import java.util.Date;
+
 
 class Exhibit{
     protected String author;
