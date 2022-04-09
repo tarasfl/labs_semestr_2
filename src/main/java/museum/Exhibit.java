@@ -1,8 +1,9 @@
 package museum;
+import java.util.Comparator;
 import java.util.Date;
 
 
-public class Exhibit implements Comparable<Exhibit>{
+public class Exhibit{
     protected String author;
     protected Date date_of_creating;
     protected String origin;
@@ -19,10 +20,10 @@ public class Exhibit implements Comparable<Exhibit>{
         return this.date_of_creating;
     }
 
-    @Override
-    public int compareTo(Exhibit e) {
-        return this.get_date_of_creating().compareTo(e.get_date_of_creating());
-    }
+    public String get_author(){
+        return this.author;
+    };
+
 
     public Exhibit(){
         author = "Hto";
@@ -39,6 +40,5 @@ public class Exhibit implements Comparable<Exhibit>{
         theme = obj_theme;
         date_of_presenting =  obj_date_of_presenting;
     }
-
-
 }
+

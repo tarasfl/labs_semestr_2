@@ -2,13 +2,11 @@ package managers;
 
 import museum.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Collections;
+import java.util.*;
+import java.util.stream.Stream;
 
 public class ExhibitsManager{
-    static public List<Exhibit> find_exhibits_by_theme(List<Exhibit> exhibits, String theme){
-        System.out.println("starting...");
+    static public List<Exhibit> find_exhibits_by_theme(List<Exhibit> exhibits, String theme,  boolean descend){
         List<Exhibit> sorted_exhibits = new ArrayList<Exhibit>();
         for(int i=0; i<exhibits.size(); i++){
             if(exhibits.get(i).get_theme()==theme){
@@ -16,11 +14,23 @@ public class ExhibitsManager{
             };
 
         }
-        Collections.sort(sorted_exhibits);
-        System.out.println("Ending");
+        if(descend){
+            Comparator sort_by_age_of_creating = Comparator.comparing(Exhibit::get_date_of_creating, Comparator.reverseOrder());
+        Collections.sort(sorted_exhibits, sort_by_age_of_creating);
+        }else {
+            Comparator sort_by_age_of_creating = Comparator.comparing(Exhibit::get_date_of_creating);
+            Collections.sort(sorted_exhibits, sort_by_age_of_creating);
+        };
         return sorted_exhibits;
     };
-    private List<Exhibit> sort_exhibits_by_time_of_presenting(Exhibition exhibits, boolean descend){
-        return null;
+    static public List<Exhibit> sort_exhibits_by_time_of_presenting(List<Exhibit> exhibits, boolean descend){
+        if(descend) {
+            Comparator sort_by_date_of_presenting = Comparator.comparing(Exhibit::get_date_of_presenting, Comparator.reverseOrder());
+            Collections.sort(exhibits,sort_by_date_of_presenting);
+        }else {
+            Comparator sort_by_date_of_presenting = Comparator.comparing(Exhibit::get_date_of_presenting);
+            Collections.sort(exhibits, sort_by_date_of_presenting);
+        }
+        return exhibits;
     };
 }
