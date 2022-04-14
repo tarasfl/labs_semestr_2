@@ -1,4 +1,4 @@
-package museum;
+package ua.lviv.iot.museum;
 
 import java.util.Date;
 

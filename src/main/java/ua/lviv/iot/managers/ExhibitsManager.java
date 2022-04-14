@@ -1,11 +1,11 @@
-package managers;
+package ua.lviv.iot.managers;
 
-import museum.Exhibit;
+import ua.lviv.iot.museum.Exhibit;
 
-import java.util.Comparator;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Comparator;
 
 
 public class ExhibitsManager {

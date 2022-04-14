@@ -1,7 +1,7 @@
-import museum.Painting;
-import museum.Sculpture;
-import museum.Exhibit;
-import managers.ExhibitsManager;
+import ua.lviv.iot.museum.Painting;
+import ua.lviv.iot.museum.Sculpture;
+import ua.lviv.iot.museum.Exhibit;
+import ua.lviv.iot.managers.ExhibitsManager;
 
 import java.util.ArrayList;
 import java.util.Calendar;
