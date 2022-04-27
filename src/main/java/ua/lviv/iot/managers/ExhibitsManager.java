@@ -9,7 +9,7 @@ import java.util.Comparator;
 
 
 public class ExhibitsManager {
-    static public List<Exhibit> findExhibitsByTheme(List<Exhibit> exhibits, String theme, boolean descend) {
+    public static  List<Exhibit> findExhibitsByTheme(List<Exhibit> exhibits, String theme, boolean descend) {
         List<Exhibit> sortedExhibits = new ArrayList<>();
         for (Exhibit exhibit : exhibits) {
             if (Objects.equals(exhibit.get_theme(), theme)) {

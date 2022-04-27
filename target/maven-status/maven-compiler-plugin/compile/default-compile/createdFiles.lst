@@ -1,6 +1,6 @@
 Main.class
-museum\Exhibition.class
-museum\Exhibit.class
-managers\ExhibitsManager.class
-museum\Sculpture.class
-museum\Painting.class
+ua\lviv\iot\museum\Exhibit.class
+ua\lviv\iot\museum\Sculpture.class
+ua\lviv\iot\managers\ExhibitsManager.class
+ua\lviv\iot\museum\Exhibition.class
+ua\lviv\iot\museum\Painting.class
