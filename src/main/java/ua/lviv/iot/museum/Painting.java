@@ -2,6 +2,7 @@ package ua.lviv.iot.museum;
 
 import java.util.Date;
 
+
 public class Painting extends Exhibit{
     private final double height;
     private final double length;

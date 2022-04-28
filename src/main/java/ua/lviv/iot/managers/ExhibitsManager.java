@@ -9,22 +9,22 @@ import java.util.Comparator;
 
 
 public class ExhibitsManager {
-    public static  List<Exhibit> findExhibitsByTheme(List<Exhibit> exhibits, String theme, boolean descend) {
+    public   List<Exhibit> findExhibitsByTheme(List<Exhibit> exhibits, String theme, boolean descend) {
         List<Exhibit> sortedExhibits = new ArrayList<>();
         for (Exhibit exhibit : exhibits) {
-            if (Objects.equals(exhibit.get_theme(), theme)) {
+            if (Objects.equals(exhibit.getTheme(), theme)) {
                 sortedExhibits.add(exhibit);
             }
         }
         if (descend) {
-            sortedExhibits.sort(Comparator.comparing(Exhibit::get_date_of_creating, Comparator.reverseOrder()));
+            sortedExhibits.sort(Comparator.comparing(Exhibit::getDateOfCreating, Comparator.reverseOrder()));
         } else {
-            sortedExhibits.sort(Comparator.comparing(Exhibit::get_date_of_creating));
+            sortedExhibits.sort(Comparator.comparing(Exhibit::getDateOfCreating));
         }
         return sortedExhibits;
     }
 
-    static public List<Exhibit> sortExhibitsByTimeOfPresenting(List<Exhibit> exhibits, boolean descend) {
+     public List<Exhibit> sortExhibitsByTimeOfPresenting(List<Exhibit> exhibits, boolean descend) {
         if (descend) {
             exhibits.sort(Comparator.comparing(Exhibit::getDateOfPresenting, Comparator.reverseOrder()));
         } else {
