@@ -87,4 +87,5 @@ class ExhibitsManagerTest {
         sortExhibitsByTimeOfPresentingTest(unsortedList, sortedList, true);
     }
 
+
 }

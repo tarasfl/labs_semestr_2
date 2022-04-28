@@ -17,4 +17,12 @@ public class Sculpture extends Exhibit{
         this.weight=objWeight;
         this.style= objStyle;
     }
+
+    public String toCVS(){
+        return super.toCVS()+", " + this.style + ", " + this.weight;
+    }
+
+    public String getHeaders(){
+        return super.getHeaders()+", style, weight";
+    }
 }

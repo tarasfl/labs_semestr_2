@@ -18,5 +18,13 @@ public class Exhibit {
         this.theme = objTheme;
         this.dateOfPresenting = objDateOfPresenting;
     }
+
+    public String toCVS(){
+        return this.author+", "+this.theme+ ", " + this.dateOfCreating;
+    }
+
+    public String getHeaders(){
+        return "author, theme, date of creating";
+    }
 }
 

@@ -13,4 +13,10 @@ public class Painting extends Exhibit{
         this.length=objLength;
         this.style=objStyle;
     }
+    public String getHeaders(){
+        return super.getHeaders()+", style";
+    }
+    public String toCVS(){
+        return super.toCVS() +", " + this.style;
+    }
 }
