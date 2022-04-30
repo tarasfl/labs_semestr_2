@@ -19,7 +19,7 @@ public class Exhibit {
         this.dateOfPresenting = objDateOfPresenting;
     }
 
-    public String toCVS(){
+    public String toCSV(){
         return this.author+", "+this.theme+ ", " + this.dateOfCreating;
     }
 

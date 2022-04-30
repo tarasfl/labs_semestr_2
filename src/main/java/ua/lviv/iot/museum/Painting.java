@@ -16,7 +16,7 @@ public class Painting extends Exhibit{
     public String getHeaders(){
         return super.getHeaders()+", style";
     }
-    public String toCVS(){
-        return super.toCVS() +", " + this.style;
+    public String toCSV(){
+        return super.toCSV() +", " + this.style;
     }
 }

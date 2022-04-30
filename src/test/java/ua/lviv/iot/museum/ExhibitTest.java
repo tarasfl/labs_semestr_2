@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ExhibitTest {
 
     @Test
@@ -20,6 +18,6 @@ class ExhibitTest {
     @Test
     void testCVS() {
         Exhibit exhibit = new Exhibit("john", new Date(1900, 9, 9), "klld", "gr", new Date(1900, 5, 24));
-        Assertions.assertEquals("john, gr, Thu Oct 09 00:00:00 EEST 3800", exhibit.toCVS());
+        Assertions.assertEquals("john, gr, Thu Oct 09 00:00:00 EEST 3800", exhibit.toCSV());
     }
 }

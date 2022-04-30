@@ -18,8 +18,8 @@ public class Sculpture extends Exhibit{
         this.style= objStyle;
     }
 
-    public String toCVS(){
-        return super.toCVS()+", " + this.style + ", " + this.weight;
+    public String toCSV(){
+        return super.toCSV()+", " + this.style + ", " + this.weight;
     }
 
     public String getHeaders(){
