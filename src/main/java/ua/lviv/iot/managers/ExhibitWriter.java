@@ -1,23 +1,23 @@
 package ua.lviv.iot.managers;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import ua.lviv.iot.museum.Exhibit;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
-import lombok.NoArgsConstructor;
+
 
 public class ExhibitWriter {
 
-    private String fileName;
 
+    @SuppressFBWarnings("DM_DEFAULT_ENCODING")
+    public void writeToFile(List<Exhibit> exhibitsList) throws IOException {
 
-    public void writeToFile(List<Exhibit> exhibitsList) {
-
-            try(FileWriter writer = new FileWriter("result.csv")) {
+        try (FileWriter writer = new FileWriter("result.csv")) {
             String currentHeader = "";
 
-            for(Exhibit exhibit: exhibitsList){
+            for (Exhibit exhibit : exhibitsList) {
 
                 if (!exhibit.getHeaders().equals(currentHeader)) {
                     currentHeader = exhibit.getHeaders();
@@ -28,8 +28,6 @@ public class ExhibitWriter {
                 writer.write("\r\n");
 
             }
-        }catch (IOException e){
-                System.out.println("error, can't create file"+ e);
-            }
+        }
     }
 }
