@@ -9,7 +9,7 @@ import java.util.Comparator;
 
 
 public class ExhibitsManager {
-    public   List<Exhibit> findExhibitsByTheme(List<Exhibit> exhibits, String theme, boolean descend) {
+    public List<Exhibit> findExhibitsByTheme(List<Exhibit> exhibits, final String theme, final boolean descend) {
         List<Exhibit> sortedExhibits = new ArrayList<>();
         for (Exhibit exhibit : exhibits) {
             if (Objects.equals(exhibit.getTheme(), theme)) {
@@ -24,7 +24,7 @@ public class ExhibitsManager {
         return sortedExhibits;
     }
 
-     public List<Exhibit> sortExhibitsByTimeOfPresenting(List<Exhibit> exhibits, boolean descend) {
+    public List<Exhibit> sortExhibitsByTimeOfPresenting(List<Exhibit> exhibits, final boolean descend) {
         if (descend) {
             exhibits.sort(Comparator.comparing(Exhibit::getDateOfPresenting, Comparator.reverseOrder()));
         } else {

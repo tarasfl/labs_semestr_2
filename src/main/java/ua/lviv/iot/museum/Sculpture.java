@@ -9,7 +9,7 @@ public class Sculpture extends Exhibit {
     private final double weight;
     private final String style;
 
-    public Sculpture(final double objHeight, final double objLength, final double objWidth, final double objWeight, final String objStyle, String author, Date dateOfCreating, String origin, String theme, Date dateOfPresenting) {
+    public Sculpture(final double objHeight, final double objLength, final double objWidth, final double objWeight, final String objStyle, final String author, final Date dateOfCreating, final String origin, final String theme, final Date dateOfPresenting) {
         super(author, dateOfCreating, origin, theme, dateOfPresenting);
         this.height = objHeight;
         this.length = objLength;

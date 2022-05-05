@@ -39,7 +39,7 @@ class ExhibitWriterTest {
 
 
     @Test
-    void testCSVResultsWithSpecificFileName() throws IOException {
+    void testCSVResultsWithExpectedFile() throws IOException {
         createCSV();
         try (FileReader expectedReader = new FileReader("expected.csv");
              BufferedReader ebr = new BufferedReader(expectedReader);
@@ -47,7 +47,6 @@ class ExhibitWriterTest {
              BufferedReader abr = new BufferedReader(actualReader)
         ) {
             Assertions.assertEquals(ebr.lines().collect(Collectors.joining()), abr.lines().collect(Collectors.joining()));
-            System.out.println(ebr.lines().collect(Collectors.joining()));
         }
 
     }

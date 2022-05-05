@@ -6,26 +6,26 @@ import ua.lviv.iot.museum.Exhibit;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
-
+import java.io.BufferedWriter;
 
 public class ExhibitWriter {
 
-
     @SuppressFBWarnings("DM_DEFAULT_ENCODING")
-    public void writeToFile(List<Exhibit> exhibitsList) throws IOException {
+    public void writeToFile(final List<Exhibit> exhibitsList) throws IOException {
 
-        try (FileWriter writer = new FileWriter("result.csv")) {
+        try (FileWriter writer = new FileWriter("result.csv");
+                BufferedWriter bw = new BufferedWriter(writer)) {
             String currentHeader = "";
 
             for (Exhibit exhibit : exhibitsList) {
 
                 if (!exhibit.getHeaders().equals(currentHeader)) {
                     currentHeader = exhibit.getHeaders();
-                    writer.write(exhibit.getHeaders());
-                    writer.write("\r\n");
+                    bw.write(exhibit.getHeaders());
+                    bw.newLine();
                 }
-                writer.write(exhibit.toCSV());
-                writer.write("\r\n");
+                bw.write(exhibit.toCSV());
+                bw.newLine();
 
             }
         }

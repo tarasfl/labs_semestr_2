@@ -2,11 +2,15 @@ package ua.lviv.iot.museum;
 
 import java.util.Date;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+
+@SuppressFBWarnings("EI_EXPOSE_REP")
 @NoArgsConstructor
 public class Exhibit {
+
     protected String author;
     @Getter
     protected Date dateOfCreating;
@@ -16,6 +20,7 @@ public class Exhibit {
     @Getter
     protected Date dateOfPresenting;
 
+    @SuppressFBWarnings("URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD")
     public Exhibit(String objAuthor, Date objDateOfCreating, String objOrigin, String objTheme, Date objDateOfPresenting) {
         this.author = objAuthor;
         this.dateOfCreating = objDateOfCreating;
