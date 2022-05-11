@@ -7,7 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 
-@SuppressFBWarnings("EI_EXPOSE_REP")
+
+@SuppressFBWarnings({"EI_EXPOSE_REP", "EI_EXPOSE_REP2"})
 @NoArgsConstructor
 public class Exhibit {
 
@@ -19,6 +20,7 @@ public class Exhibit {
     protected String theme;
     @Getter
     protected Date dateOfPresenting;
+
 
     @SuppressFBWarnings("URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD")
     public Exhibit(String objAuthor, Date objDateOfCreating, String objOrigin, String objTheme, Date objDateOfPresenting) {
